@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 2 - Experiências 3D Interativas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .project-info {
+            padding: 25px;
+        }
+        
+        .project-info h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .project-info p {
+            color: #bbb;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .tech-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .tech-tag {
+            background: rgba(78, 205, 196, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #4ecdc4;
+        }
+        
+        .btn-play {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        
+        .btn-play:hover {
+            transform: scale(1.05);
+        }
+        
+        .requirements-section {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        
+        .requirements-section h3 {
+            margin-bottom: 20px;
+            color: #4ecdc4;
+        }
+        
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .req-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .req-item .check {
+            color: #4ecdc4;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
+        }
+        
+        a {
+            color: #4ecdc4;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Experiências 3D Interativas</h1>
+            <p class="subtitle">Projeto 2 - Unity + Cinemachine 3.1.6 | WebGL Builds</p>
+        </header>
+        
+        <div class="projects-grid">
+            <!-- Projeto A - Orbital -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h2>🎯 Projeto A: Visualizador Orbital</h2>
+                    <p>Visualizador 3D interativo com câmera orbital controlada por Slider UI. Aproxima e afasta a câmara em torno do objeto 3D.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Cinemachine FreeLook</span>
+                        <span class="tech-tag">UI Slider</span>
+                        <span class="tech-tag">Orbital Control</span>
+                        <span class="tech-tag">WebGL</span>
+                    </div>
+                    <a href="https://pedrobpinheiro.itch.io/projeto-a-visualizador-orbital-3d" class="btn-play" target="_blank">🎮 Jogar Agora</a>
+                </div>
+            </div>
+            
+            <!-- Projeto B - Camera Switcher -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h2>🎬 Projeto B: Realizador de Cinema</h2>
+                    <p>Sistema de múltiplas câmeras cinematográficas. Alterna entre 4 planos diferentes: Close-Up, Americano, Geral e Sobre Ombro.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">4 Câmeras Cinemachine</span>
+                        <span class="tech-tag">UI Toggles</span>
+                        <span class="tech-tag">Mixamo Animation</span>
+                        <span class="tech-tag">Camera Switching</span>
+                    </div>
+                    <a href="https://pedrobpinheiro.itch.io/projeto-b-realizador-de-cinema" class="btn-play" target="_blank">🎮 Jogar Agora</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="requirements-section">
+            <h3>📋 Requisitos Técnicos Implementados</h3>
+            <div class="requirements-grid">
+                <div class="req-item"><span class="check">✅</span> Cinemachine 3.1.6</div>
+                <div class="req-item"><span class="check">✅</span> WebGL Build</div>
+                <div class="req-item"><span class="check">✅</span> Publicação itch.io</div>
+                <div class="req-item"><span class="check">✅</span> UI Slider (Orbital)</div>
+                <div class="req-item"><span class="check">✅</span> UI Toggles (Camera Switcher)</div>
+                <div class="req-item"><span class="check">✅</span> Personagem Animado</div>
+                <div class="req-item"><span class="check">✅</span> GitHub Pages</div>
+                <div class="req-item"><span class="check">✅</span> 4 Planos de Câmara</div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Projeto desenvolvido para disciplina de Experiências 3D Interativas</p>
+            <p>Unity 6.3 LTS + Cinemachine 3.1.6 + WebGL</p>
+            <p style="margin-top: 10px;">
+                📁 <a href="https://github.com/PedroBabau/Projeto_2_Experiencias_3D_Interativas_Unity" target="_blank">Repositório GitHub</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
