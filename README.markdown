@@ -1,5 +1,3 @@
-Aqui está o README atualizado com base no código final do index:
-
 ---
 
 # 🎮 Projeto 2 - Experiências 3D Interativas com Unity
@@ -122,3 +120,5 @@ Projeto desenvolvido para a disciplina de **Edições Multimédia Interativas**.
 ### ✅ Nota sobre o Iframe
 
 Os jogos são carregados num iframe dentro da landing page, mantendo o utilizador no portfólio, conforme recomendado para uma melhor experiência de navegação.
+
+---
